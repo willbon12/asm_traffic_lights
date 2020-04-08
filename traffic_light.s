@@ -36,14 +36,15 @@
 */ 
 
 
-    .section .data
-        
+    .data
+    .align  
     state: .word 4 /*Initial starting state of program */
-
+    byte_array: .byte 1, 7, 2,3, 4
+    .align  //align directive must come directly before value you wish to align
+    var: .word 9
     
-    .section .text,"ax"
-    //.balign 4
-        
+    .text
+     
     .global asm_src
     .type   asm_src, "function"
     
